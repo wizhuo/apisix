@@ -64,3 +64,7 @@ jobs:
 
       - name: Linux Script
         run: sudo ./ci/${{ matrix.job_name }}_runner.sh script
+      - name: Run debugger
+        if: ${{ failure() }}
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 15
