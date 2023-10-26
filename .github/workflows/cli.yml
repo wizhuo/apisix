@@ -2,7 +2,7 @@ name: CLI Test
 
 on:
   push:
-    branches: [master, 'release/**',feat_zipkin_variables]
+    branches: [master, 'release/**']
     paths-ignore:
       - 'docs/**'
       - '**/*.md'
